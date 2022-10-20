@@ -1,0 +1,22 @@
+<header class="header ">
+    <div class="logo">
+        VIKAS RAI
+    </div>
+    <div class="nav" [ngClass]="{'side-nav':display==true}">
+        <ul [ngClass]="{'nav-hide':nav==false}">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <button [ngClass]="{'sun-btn':day==true,'moon-btn':night==true}" (click)="toggle_color()">
+                <i *ngIf="night" class='uil uil-moon'></i>
+                <i *ngIf="day" class='uil uil-sun'></i>
+            </button>
+        </ul>
+        <div class="hamburger" [ngClass]="{'open-burger':burger==true}" (click)="burgerClick()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+</header>

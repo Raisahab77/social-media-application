@@ -1,0 +1,12 @@
+.nav{
+    padding: 2em;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    font-size: 1.3em;
+    color: white;    
+    text-decoration: none;
+    line-height: 2;
+}

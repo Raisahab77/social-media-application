@@ -1,0 +1,126 @@
+header{
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 2px solid red;
+    /* border-bottom: 1px solid var(--secondary-color); */
+    max-width: 100%;
+    background-color: var(--primary-color);
+    z-index: 2;
+    height: 73px;
+}
+.nav{
+    height: 10px;
+}
+.hamburger{
+    display: none;
+}
+.bar{
+    width: 33px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 3px 2px;
+}
+.logo{
+    font-size: 2em;
+}
+.nav ul{
+    display: flex;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    padding-right: 2em;
+    font-size: 1.4em;
+    color: var(--secondary-color);
+    transition: 0.5s;
+}
+/* .nav ul button{
+    background-color: red;
+    border: none;
+} */
+.sun-btn{
+    background-color: black;
+    color: white;
+    border: none;
+}
+.moon-btn{
+    background-color: white;
+    color: black;
+    border: none;}
+.nav ul li a:hover{
+    color: violet;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 650px){
+
+    .nav ul{
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 24px;
+    }
+    .nav ul li a{
+        color: var(--primary-color);
+        padding: 4px;
+        margin-top: 5px;
+
+    }
+    .hamburger{
+        display: block;
+        height: fit-content;
+        z-index: 4;
+    }
+    
+    .side-nav{
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: violet;
+        width: 50%;
+        height: 100vh;
+        transition: 0.3s ease-out;
+    }
+    .nav-hide{
+        opacity: 0;
+    }
+    .open-burger{
+        position: absolute;
+        top: 15px;
+        left: 20px;
+    }
+    .open-burger .bar{
+        background-color: var(--primary-color);
+    }
+    .sun-btn{
+        background-color: violet;
+        color: black;
+        border: none;
+    }
+    .moon-btn{
+        background-color: violet;
+        color: white;
+        border: none;}
+    
+}
+
+@media screen and (max-width: 450px)
+{
+    .side-nav{
+        width: 100%;
+    }
+    .side-nav ul{
+        margin: 35% 22%;
+    }
+    .side-nav ul li{
+        font-size: 1.2em;
+        padding: 1em;
+    }
+}
