@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,6 +11,13 @@ import { InfoPopupFeedComponent } from './info-popup-feed/info-popup-feed.compon
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +25,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LeftNavComponent,
     FeedComponent,
     RightSectionComponent,
-    InfoPopupFeedComponent
+    InfoPopupFeedComponent,
+    LoginComponent,
+    SignupComponent,
+    DashboardComponent,
+    AboutMeComponent,
+    NotFoundComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +38,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     MatDialogModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

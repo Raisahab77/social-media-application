@@ -1,0 +1,14 @@
+<app-header></app-header>
+<!-- In myProfile section all profile data will show -->
+<div class="myProfile">  
+    <div class="cover-pic">
+        <!--  -->
+        <img id="coverPhoto" src="../../assets/coverImage.jpg" alt="">
+        
+        <label for="file-input">
+            <img id="profilePicture" for="profileImage" src={{url}} alt="">
+        </label>
+
+        <input id="file-input" type="file" [hidden]="true" (change)="onSelectFile($event)"/>
+    </div>     
+</div>

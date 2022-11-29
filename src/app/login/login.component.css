@@ -1,0 +1,38 @@
+.login-form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+form{
+    width: 40%;
+    height: 60vh;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+    box-shadow: palegreen 5px 5px, palegreen 10px 10px, palegreen 15px 15px, palegreen 20px 20px, palegreen 25px 25px;
+}
+
+form input{
+    width: 60%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    padding: 0.3em;
+}
+form label{
+    margin-top: 20px;
+}
+#loginBtn{
+    margin-top: 40px;
+    width: 30%;
+    background-color: palegreen;
+}
+
+form label a{
+    text-decoration: none;
+}

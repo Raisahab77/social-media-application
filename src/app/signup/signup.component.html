@@ -1,0 +1,101 @@
+<div class="login-form">
+    <form [formGroup]="registrationForm" (ngSubmit)="postRegistrationData()">
+        <!-- ----------------------------------------------- -->
+        <div class="name-details">
+            <div class="name">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Enter Name" formControlName="name">
+                <span style="color:red;" *ngIf="(registerFormControl.name.touched) && registerFormControl.name.errors?.required" >Name is required</span>
+            </div>
+            <div class="username">
+                <label for="username">User Name</label>
+                <input type="text" placeholder="Enter Username" formControlName="username">
+                <span style="color:red;" *ngIf="(registerFormControl.username.touched) && registerFormControl.username.errors?.required">User Name is required</span>
+                <span style="color:red;" *ngIf="(registerFormControl.username.touched) && registerFormControl.username.errors?.pattern">Enter valid username</span>
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------- -->
+        <div class="contact-detail">
+            <div class="phone">
+                <label for="phone">Phone</label>
+                <div class="phone-number" >
+                    <select name="country-code" id="country-code" formControlName="countrycode">
+                        <option value="india" >+91</option>
+                        <option value="nepal">+111</option>
+                        <option value="sri lanka">+01</option>
+                        <option value="usa">+02</option>
+                    </select>
+                    <input type="number" placeholder="Enter Phone number" formControlName="mobile">
+                    <span style="color:red;" *ngIf="(registerFormControl.mobile.touched) && registerFormControl.mobile.errors?.required">Phone Number is required</span>
+                </div>
+            </div>
+            
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" placeholder="abc@email.com" formControlName="email">
+                <span style="color:red;" *ngIf="(registerFormControl.email.touched) && registerFormControl.email.errors?.required">Email is required</span>
+                <span style="color:red;" *ngIf="(registerFormControl.email.touched) && registerFormControl.email.errors?.email">Please Enter valid email</span>
+            </div>
+        </div>
+
+        <!-- ================================================= -->
+        <div class="personal-details">
+            <div class="gender">
+                <label for="gender">Gender</label>
+                <div class="gender-type">
+                    <div class="male">
+                        <input type="radio" name="gender" id="male" value="male" formControlName="gender"><span>Male</span>
+                    </div>
+                    <div class="female">
+                        <input type="radio" name="gender" id="female" value="female" formControlName="gender"><span>Female</span>
+                    </div>
+                    <div class="other">
+                        <input type="radio" name="gender" id="other" value="other" formControlName="gender"><span>Other</span>
+                    </div>
+                </div>
+                <span style="color:red;" *ngIf="(registerFormControl.gender.touched) && registerFormControl.gender.errors?.required">Gender is required</span>
+            </div>
+
+            <div class="dob">
+                <label for="dob">Date of birth</label>
+                <input type="date" name="dob" id="dob" formControlName="dob">
+                <span style="color:red;" *ngIf="(registerFormControl.dob.touched) && registerFormControl.dob.errors?.required">DOB is required</span>
+            </div>
+
+        </div>
+
+        <!-- ============================================= -->
+        <div class="password-details">
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password" formControlName="password">
+                <span style="color:red;" *ngIf="(registerFormControl.password.touched) && registerFormControl.password.errors?.required">Password is required</span>
+                <span style="color:red;" *ngIf="(registerFormControl.password.touched) && registerFormControl.password.errors?.lengthError">Password must be 8 to 16 character long.</span>
+                <span style="color:red;" *ngIf="(registerFormControl.password.touched) && registerFormControl.password.errors?.regexError">Password should have at least 1 uppercase letter, 1 lowercase
+                    letter and 1 number</span>
+                <!-- <span style="color:red;" *ngIf="(registerFormControl.password.touched) && registerFormControl.password.errors?.minlength">Password should be 8 character long.</span>
+                <span style="color:red;" *ngIf="(registerFormControl.password.touched) && registerFormControl.password.errors?.pattern">Password should be 8 character long, contains at least 1 upper case, 1 lower case, 1 number and 1 special character.</span> -->
+            </div>
+            <div class="confirm-password">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+                <span style="color:red;" *ngIf="(registerFormControl.confirmPassword.touched) && registerFormControl.confirmPassword.errors?.required">Confirm Password required</span>
+            </div>
+        </div>
+
+        <div class="declaration-checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox" formControlName="checkbox">
+            <label for="checkbox">I here by all above information is true</label>
+        </div>
+        
+        <input type="submit" value="Sign In" id="signUpBtn">
+        <!-- <button type="submit" routerLink="/" id="signUpBtn">Sign Up</button> -->
+        <div class="already-have-accout-label">
+            <label for="">Already have an account? <a routerLink="/">Login</a></label> 
+            <!-- <label for="">Already have an account? <a routerLink="/signup">Sign up</a> </label> -->
+        </div>    
+    </form>
+</div>
+
+<!-- routerLink="/" -->

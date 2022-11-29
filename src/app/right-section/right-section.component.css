@@ -1,0 +1,15 @@
+.user-card{
+    margin-top: 1.5em;
+    margin-left: 1em;
+    /* border: 2px solid red; */
+}
+.user-card img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+.user-card span{
+    margin-left: 10px;
+    font-weight: bold;
+}

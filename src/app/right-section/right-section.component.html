@@ -1,1 +1,6 @@
-<p>right-section works!</p>
+<div class="all-users-card">
+    <div class="user-card" *ngFor="let user of allUserData">
+        <img src={{user.profileImage}} alt="">
+        <span>{{user.username}}</span>
+    </div>
+</div>

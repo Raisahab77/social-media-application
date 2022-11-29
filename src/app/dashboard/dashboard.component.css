@@ -1,0 +1,28 @@
+.dashboard{
+    border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 73px);
+    /* background-color: aqua; */
+}
+
+.left-component{
+    width: 25%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.main-component{
+    width: 40%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.right-component{
+    width: 35%;
+    height: 100%;
+    /* background-color: rosybrown; */
+}
+
+.mat-dialog-container{
+    padding: 0;
+}

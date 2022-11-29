@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyServiceService } from '../services/my-service.service';
 
 @Component({
   selector: 'app-right-section',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightSectionComponent implements OnInit {
 
-  constructor() { }
+  allUserData : any;
+  constructor(private service:MyServiceService) { }
 
   ngOnInit(): void {
+    this.getAllUserData()
+  }
+
+  getAllUserData(){
+    this.service.getAllUser().subscribe(response=>{
+      console.log(response);
+      this.allUserData =  response;
+    })
   }
 
 }

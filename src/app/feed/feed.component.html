@@ -1,43 +1,49 @@
 <div class="feed-page">
     <div class="header-card">
-        <div class="header-card-left">
-            <img src="../../assets/youtube.jpg" alt="youtube icon">
-        </div>
-        <div class="header-card-right">
-            <div class="header-card-upper">
-                <input type="text" placeholder="Write your thought here">
+            <div class="create-post-header">
+                <img id="userProfilePicture" src={{profileImage}} alt="">
+                <form [formGroup]="newPostDescription">
+                    <input type="text" placeholder="Write your thought here" formControlName="description">
+                </form>
             </div>
-            <hr class="hr">
-            <div class="header-card-lower">
-                <span>Icon</span>
-                <span>Icon</span>
-                <span>Icon</span>
-                <span>Icon</span>
+            <div class="create-post-mid" >
+            <!-- <div class="create-post-mid" [hidden]="url==''" > -->
+                <img id="newPost" [src]="url" alt="" name="file">
+                <H1 [hidden]="url!=''">Add New Post Here</H1>
             </div>
-        </div>
-
+            <div class="create-post-footer">
+                <label for="files" class="btn"><i class="uil uil-camera-plus" style="color: red;"></i>Photo/Video</label>
+                <input id="files" style="display:none;" type="file" (change)="onSelectFile($event)">
+                <!-- <button (change)="onSelectFile($event)"><input type="file" name="file" id="file"><i class="uil uil-camera-plus" style="color: red;"></i>Photo/Video</button> -->
+                <button class="icons"><i class="uil uil-tag" style="color:green;"></i>Tag</button>
+                <button class="icons"><i class="uil uil-location-pin-alt" style="color:rgb(255, 225, 0);"></i>Location</button>
+                <button class="icons"><i class="uil uil-laughing" style="color:blue;"></i>Feeling</button>
+                <!-- <button class="share">Share</button> -->
+                <button class="share" (click)="onUpload()">Share</button>
+            </div>
     </div>
 
-    <div class="feed-card">
+    <div class="feed-card" *ngFor="let feed of feeds">
         <div class="user-details">
             <div class="user-details-header">
                 <div class="profile">
-                    <img src="../../assets/profile.png" alt="small image">
-                    <label for="">Vikas rai</label>
+                    <img src={{feed.profileImage}}>
+                    <label for="">{{feed.userName}}</label>
                 </div>
                 <button (click)="onCreatePostClick()" class="info"><i class="uil uil-ellipsis-v"></i></button>
             </div>
-            <span class="description">Here are some text</span>
+            <span class="description">{{feed.description}}</span>
         </div>
 
         <div class="post">
-            <img src="../../assets/youtube.jpg" alt="There is a youtube image.">
+            <!-- <img src="../../assets/coverphoto.jpg" [hidden]="feed.post==undefined " id="feedPost"> -->
+            <img src={{feed.post}} [hidden]="feed.post==undefined " id="feedPost">
         </div>
 
         <div class="post-details">
-            <button><i class="uil uil-heart-alt"></i></button>
-            <button><i class="uil uil-comment"></i></button>
-            <button><i class="uil uil-share"></i></button>
+            <button>{{feed.like}}<i class="uil uil-heart-alt" (click)="like(feed.like,feed._id)"></i></button>
+            <button>{{feed.comment}}<i class="uil uil-comment"></i></button>
+            <button>{{feed.share}}<i class="uil uil-share"></i></button>
         </div>
     </div>
 </div>

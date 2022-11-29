@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MyServiceService } from '../services/my-service.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:MyServiceService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -33,5 +35,15 @@ export class HeaderComponent implements OnInit {
       this.theme = !this.theme;
       this.day = !this.day;
       this.night = !this.night;
+    }
+
+    // data = this.service.userName;
+    // data = sessionStorage.getItem('username');
+    userData = JSON.parse(sessionStorage.getItem('userData') || '{}');
+    data = this.userData.username;
+
+    logout(){
+      sessionStorage.clear();
+      this.router.navigateByUrl('');
     }
 }

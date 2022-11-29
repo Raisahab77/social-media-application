@@ -1,0 +1,164 @@
+.login-form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    
+}
+form{
+    width: 40%;
+    height: 85vh;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    background-color: white;
+    overflow: auto;
+}
+
+form input{
+    font-size: 16px;
+    padding: 0.3em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.name-details{
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    padding: 1em;
+}
+.name{
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+.username{
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.contact-detail{
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    padding: 1em;
+}
+
+.phone{
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#country-code{
+    width: 30%;
+    font-size: 16px;
+    padding: 0.4em;
+    border-radius: 5px 0 0 5px;
+    background-color: #0275d8;
+}
+.phone-number input{
+    width: 70%;
+    border-radius: 0 5px 5px 0;
+}
+
+.email{
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.password-details{
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    padding: 1em;
+}
+
+.password{
+    max-width: 50%;
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.confirm-password{
+    max-width: 50%;
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.personal-details{
+    width: 100%;
+    /* border: 2px dashed darkblue; */
+    display: flex;
+    padding: 1em;
+}
+
+.gender{
+    width: 50%;
+    /* border: 2px solid rgb(0, 255, 21); */
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.gender-type{
+    display: flex;
+}
+
+.gender-type input{
+    margin-left: 6px;
+}
+
+.dob{
+    max-width: 50%;
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.declaration-checkbox{
+    margin-top: 20px;
+}
+#signUpBtn{
+    margin-top: 20px;
+    width: 30%;
+    background-color: palegreen;
+}
+
+.already-have-accout-label{
+    margin-top: 2em;
+}
+
+.already-have-accout-label a{
+    text-decoration: none;
+}
